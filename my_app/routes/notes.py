@@ -13,7 +13,7 @@ from pydantic import ValidationError
 
 
 router = APIRouter(prefix="/notes", tags=["Notes"])
-templates = Jinja2Templates(directory="templates")
+templates = Jinja2Templates(directory="my_app/templates")
 
 # by PL
 @router.get('/all')
