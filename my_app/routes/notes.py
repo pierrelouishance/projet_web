@@ -17,7 +17,7 @@ templates = Jinja2Templates(directory="my_app/templates")
 
 # by PL
 @router.get('/all')
-def listes_notes(
+async def listes_notes(
     request: Request,
     # user: UserSchema = Depends(login_manager.optional),
 ):
