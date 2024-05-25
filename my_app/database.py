@@ -9,6 +9,9 @@ class Base(DeclarativeBase):
     pass
 
 from my_app.models.modele_note import Note
+from my_app.models.modele_user import User
+from my_app.models.modele_partage import Partage
+
 
 def create_database() :
     Base.metadata.create_all(engine)

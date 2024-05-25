@@ -6,13 +6,9 @@ from my_app.database import Base
 class Note(Base):
     __tablename__ = "notes"
 
-    id      = mapped_column(String, primary_key=True)
-    name     = mapped_column(String(50), nullable=False, unique=True)
-    auteur  = mapped_column(String(50), nullable=False)
-    editeur : Mapped[Optional[str]] = mapped_column(String(50), nullable=True)
-    prix    = mapped_column(Float, nullable=False)
-    is_sale = mapped_column(String, nullable=False)
-    
-    # owner_id =  mapped_column(String, ForeignKey('users.id'))
+    id  = mapped_column(String, primary_key=True)
+    titre = mapped_column(String(50), nullable=False)
+    auteur_id: Mapped[str] = mapped_column(ForeignKey("user.id"))
+    texte = mapped_column(String(1000), nullable=False)
+    categorie = mapped_column(String(50), nullable=True)
 
-    # owner = relationship("User", back_populates="books")
