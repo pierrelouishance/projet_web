@@ -15,3 +15,10 @@ def get_db():
 def get_all_notes():
     with get_db() as db:
         return db.query(Note).all()
+    
+def add_note(db: Session, titre: str, categorie: str, texte: str, auteur_id: str):
+    note = Note(id=str(uuid.uuid4()), titre=titre, categorie=categorie, texte=texte, auteur_id=auteur_id)
+    db.add(note)
+    db.commit()
+    db.refresh(note)
+    return note    

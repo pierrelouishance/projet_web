@@ -1,0 +1,26 @@
+{% extends "navbar.html" %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h2>Créer une nouvelle note</h2>
+        <form action="/notes/create" method="post">
+            <div class="mb-3">
+                <label for="title" class="form-label">Titre</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <div class="mb-3">
+                <label for="category" class="form-label">Catégorie</label>
+                <select class="form-control" id="category" name="category" required>
+                    <option value="informatique">Informatique</option>
+                    <option value="droit">Droit</option>
+                    <option value="medecine">Médecine</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="content" class="form-label">Contenu</label>
+                <textarea class="form-control" id="content" name="content" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Créer</button>
+        </form>
+    </div>
+{% endblock %}

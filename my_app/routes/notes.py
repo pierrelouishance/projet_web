@@ -27,4 +27,18 @@ def listes_notes(
         request,
         "liste_notes.html",{"notes":notes}
     )
+@app.route('/accueil')
+def accueil():
+    return render_template('acceuil.html')
 
+@router.get("/create")
+def create_note_form(request: Request):
+    return templates.TemplateResponse("create_notes.html", {"request": request})
+
+@router.post("/create")
+def create_note(request: Request, titre: str = Form(...), categorie: str = Form(...), texte: str = Form(...), db: Session = Depends(get_db)):
+    if not titre or not categorie or not texte:
+        raise HTTPException(status_code=400, detail="All fields are required")
+    
+    add_note(db, titre, categorie, texte, "auteur_id_placeholder")  # Remplacez "auteur_id_placeholder" par l'ID de l'utilisateur authentifié
+    return RedirectResponse(url="/notes/all", status_code=303)
