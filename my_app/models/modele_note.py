@@ -10,5 +10,5 @@ class Note(Base):
     titre = mapped_column(String(50), nullable=False)
     auteur_id: Mapped[str] = mapped_column(ForeignKey("user.id"))
     texte = mapped_column(String(1000), nullable=False)
-    categorie = mapped_column(String(50), nullable=True)
+    categorie = mapped_column(String(50), nullable=False)
 

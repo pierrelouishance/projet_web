@@ -8,6 +8,15 @@
     <!-- <link rel="stylesheet" href="/static/css/styles.css"> -->
 </head>
 <body>
+
     <h1> voici la liste des notes </h1>
+    {% for note in notes %}
+                <tr>
+                    <td>{{ note.tire }}</td>
+                    <td class="text-truncate">{{ note.categorie }}</td>
+                    <td class="text-truncate">{{ note.texte }}</td>
+                 
+                </tr>
+                {% endfor %}
 
 </body>
