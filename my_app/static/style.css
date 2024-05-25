@@ -1,0 +1,98 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.1rem;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-item:last-child {
+    margin-left: auto;
+}
+
+/* Home Page Styles */
+.container {
+    margin-top: 2rem;
+}
+
+.welcome-message p {
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-size: 1.25rem;
+    padding: 0.75rem 1.25rem;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.col-md-8 {
+    margin-bottom: 2rem;
+}
+
+.list-group-item {
+    margin-bottom: 1rem;
+    border-radius: 0.25rem;
+}
+
+.list-group-item h5 {
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.list-group-item p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.list-group-item small {
+    font-size: 0.875rem;
+    color: #6c757d;
+}
+
+.form-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.form-control {
+    border-radius: 0.25rem;
+}
+
+.btn-secondary {
+    margin-left: 1rem;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
